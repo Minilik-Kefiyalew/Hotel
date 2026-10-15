@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-hotel-dark font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold-600 hover:bg-gold-700 text-white font-semibold px-8 py-3 rounded transition-all duration-300 tracking-wide uppercase text-sm shadow-lg hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold-500 text-gold-600 hover:bg-gold-600 hover:text-white font-semibold px-8 py-3 rounded transition-all duration-300 tracking-wide uppercase text-sm;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-hotel-dark leading-tight;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .section-subtitle {
+    @apply text-gold-600 uppercase tracking-[0.2em] text-sm font-semibold mb-3;
+  }
+
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold-500 mx-auto my-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #b45309; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #92400e; }
