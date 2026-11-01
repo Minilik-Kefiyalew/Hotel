@@ -174,10 +174,10 @@ export default function BookingForm() {
                         className="text-3xl font-bold text-gold-400"
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
-                        ${estimatedTotal}
+                        ETB {estimatedTotal}
                       </div>
                       <div className="text-gray-400 text-xs mt-0.5">
-                        {nights} night{nights > 1 ? 's' : ''} × ${selectedRoom?.price}/night
+                        {nights} night{nights > 1 ? 's' : ''} × ETB {selectedRoom?.price.toLocaleString()}/night
                       </div>
                     </div>
                   )}
@@ -269,7 +269,7 @@ export default function BookingForm() {
                       <option value="">Select a room…</option>
                       {rooms.map((r) => (
                         <option key={r.id} value={r.name}>
-                          {r.name} — ${r.price}/night
+                          {r.name} — ETB {r.price.toLocaleString()}/night
                         </option>
                       ))}
                     </select>

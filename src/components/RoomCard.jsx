@@ -85,7 +85,7 @@ export default function RoomCard({ room }) {
           <div className="flex items-center justify-between pt-4 border-t border-gray-100">
             <div>
               <span className="text-2xl font-bold text-hotel-dark" style={{ fontFamily: 'Playfair Display, serif' }}>
-                ${room.price}
+                ETB {room.price.toLocaleString()}
               </span>
               <span className="text-gray-400 text-sm"> / night</span>
             </div>
@@ -145,7 +145,7 @@ export default function RoomCard({ room }) {
                 </div>
                 <div className="text-right">
                   <div className="text-3xl font-bold text-hotel-dark" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    ${room.price}
+                    ETB {room.price.toLocaleString()}
                   </div>
                   <div className="text-gray-400 text-xs">per night</div>
                 </div>
